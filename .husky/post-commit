@@ -1,0 +1,6 @@
+echo "#!/bin/sh
+. \"$(dirname \"$0\")/_/husky.sh\"
+
+npm run changelog
+git add CHANGELOG.md
+git commit -m 'chore: update changelog' --no-verify || echo 'changelog update skipped'" > post-commit
